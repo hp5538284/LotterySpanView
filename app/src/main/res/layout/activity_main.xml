@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <com.yinghuanhang.lottery.SquareFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:stretchMode="vertical">
+
+        <com.yinghuanhang.lottery.LotterySpanView
+            android:id="@+id/lottery_span"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="42dp"/>
+
+        <ImageView
+            android:id="@+id/lottery_background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:contentDescription="@null"
+            android:src="@drawable/turntable_lamp_background"/>
+
+        <ImageView
+            android:id="@+id/lottery_start"
+            android:layout_width="104dp"
+            android:layout_height="104dp"
+            android:layout_gravity="center"
+            android:contentDescription="@null"
+            android:src="@drawable/turntable_start"/>
+    </com.yinghuanhang.lottery.SquareFrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/lottery_speed_low"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:layout_weight="1"
+            android:text="速度8-12"/>
+
+        <Button
+            android:id="@+id/lottery_speed_middle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:layout_weight="1"
+            android:text="速度12-18"/>
+
+        <Button
+            android:id="@+id/lottery_speed_fast"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:layout_weight="1"
+            android:text="速度18-24"/>
+    </LinearLayout>
+</LinearLayout>
