@@ -49,21 +49,28 @@ public class SampleActivity extends AppCompatActivity implements View.OnClickLis
                 break;
             }
             case R.id.lottery_damp_middle: {
+                mBaseSpeed = 24f;
                 mLotterySpan.setDamping(4f);
                 break;
             }
             case R.id.lottery_damp_fast: {
+                mBaseSpeed = 24f;
                 mLotterySpan.setDamping(5f);
                 break;
             }
             case R.id.lottery_damp_low: {
+                mBaseSpeed = 24f;
                 mLotterySpan.setDamping(3f);
                 break;
             }
             case R.id.lottery_start: {
-                float target = (float) (Math.random() * 6) + mBaseSpeed;
                 int index = (int) (Math.random() * mLotterySpan.getLotteries().size());
-                mLotterySpan.onStarting(target);
+                if (mBaseSpeed == 24f) {
+                    mLotterySpan.onStarting(24f);
+                } else {
+                    float target = (float) (Math.random() * 6) + mBaseSpeed;
+                    mLotterySpan.onStarting(target);
+                }
                 mLotterySpan.onStoppingIndex(index);
                 Log.v("Lottery", "Stop on" + mLotterySpan.getLotteries().get(index).getName());
                 break;

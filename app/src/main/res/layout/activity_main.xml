@@ -42,8 +42,8 @@
             android:id="@+id/lottery_speed_low"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:layout_marginEnd="15dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
             android:layout_weight="1"
             android:text="速度8-12"/>
 
@@ -51,8 +51,8 @@
             android:id="@+id/lottery_speed_middle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:layout_marginEnd="15dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
             android:layout_weight="1"
             android:text="速度12-18"/>
 
@@ -60,8 +60,8 @@
             android:id="@+id/lottery_speed_fast"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:layout_marginEnd="15dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
             android:layout_weight="1"
             android:text="速度18-24"/>
     </LinearLayout>
@@ -75,27 +75,27 @@
             android:id="@+id/lottery_damp_low"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:layout_marginEnd="15dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
             android:layout_weight="1"
-            android:text="阻尼3"/>
+            android:text="速度24阻尼3"/>
 
         <Button
             android:id="@+id/lottery_damp_middle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:layout_marginEnd="15dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
             android:layout_weight="1"
-            android:text="阻尼4"/>
+            android:text="速度24阻尼4"/>
 
         <Button
             android:id="@+id/lottery_damp_fast"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:layout_marginEnd="15dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
             android:layout_weight="1"
-            android:text="阻尼5"/>
+            android:text="速度24阻尼5"/>
     </LinearLayout>
 </LinearLayout>
