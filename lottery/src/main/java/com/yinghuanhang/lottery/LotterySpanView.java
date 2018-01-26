@@ -87,8 +87,18 @@ public class LotterySpanView extends View implements Runnable {
 
     private float mTarget = 0f;
     private float mAcceleration = 10f, mSpeed = 0f;
+    private float mDamping = 4f;
     private boolean mIsRolling = false;
     private static final int mDelay = 16;
+
+    /**
+     * 设置阻尼系数
+     *
+     * @param damping
+     */
+    public void setDamping(float damping) {
+        mDamping = damping;
+    }
 
     public void onStoppingIndex(final int targetIndex) {
         postDelayed(new Runnable() {
@@ -117,7 +127,7 @@ public class LotterySpanView extends View implements Runnable {
         removeCallbacks(LotterySpanView.this);
         mIsRolling = false;
         // 根据速度计算还要转动多少圈，外加当前奖项起始角度，奖项内随机角度
-        int times = (int) (mSpeed / 4) * 360 + 360;
+        int times = (int) (mSpeed / mDamping) * 360 + 360;
         float random = mSweep * (float) (Math.random() - 0.5d) * 0.45f;
         float distance = times - mSweep * targetIndex + random;
         float n = 2f * (distance - mCurrent) / mSpeed;

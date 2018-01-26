@@ -27,6 +27,9 @@ public class SampleActivity extends AppCompatActivity implements View.OnClickLis
         findViewById(R.id.lottery_speed_fast).setOnClickListener(SampleActivity.this);
         findViewById(R.id.lottery_speed_middle).setOnClickListener(SampleActivity.this);
         findViewById(R.id.lottery_speed_low).setOnClickListener(SampleActivity.this);
+        findViewById(R.id.lottery_damp_fast).setOnClickListener(SampleActivity.this);
+        findViewById(R.id.lottery_damp_middle).setOnClickListener(SampleActivity.this);
+        findViewById(R.id.lottery_damp_low).setOnClickListener(SampleActivity.this);
         onBuildingLotterySpanItems(mLotterySpan);
     }
 
@@ -43,6 +46,18 @@ public class SampleActivity extends AppCompatActivity implements View.OnClickLis
             }
             case R.id.lottery_speed_low: {
                 mBaseSpeed = 6f;
+                break;
+            }
+            case R.id.lottery_damp_middle: {
+                mLotterySpan.setDamping(4f);
+                break;
+            }
+            case R.id.lottery_damp_fast: {
+                mLotterySpan.setDamping(5f);
+                break;
+            }
+            case R.id.lottery_damp_low: {
+                mLotterySpan.setDamping(3f);
                 break;
             }
             case R.id.lottery_start: {
